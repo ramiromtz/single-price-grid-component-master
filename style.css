@@ -1,0 +1,151 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+/****************************
+***** VARIABLES *************
+****************************/
+
+:root {
+  /* Primary colors */
+  --Cyan: hsl(179, 62%, 43%);
+  --Bright-Yellow: hsl(71, 73%, 54%);
+
+  /* Neutral colors */
+  --Light---Gray: hsl(204, 43%, 93%);
+  --Grayish---Blue: hsl(218, 22%, 68%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Karla', sans-serif;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background-color: #e6eff6;
+}
+
+.container {
+  max-width: 90%;
+  width: 625px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.offer {
+  grid-column: 1 / 3;
+  padding: 40px;
+  background-color: #fff;
+}
+
+.offer__title {
+  color: var(--Cyan);
+  font-weight: 700;
+  margin-bottom: 35px;
+}
+
+.offer__paragraph {
+  margin-bottom: 20px;
+  color: var(--Bright-Yellow);
+  font-weight: 700;
+}
+
+.info {
+  color: var(--Grayish---Blue);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.price {
+  padding: 30px;
+  background-color: var(--Cyan);
+}
+
+.price h3,
+.why__us h3 {
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.price h1 {
+  color: #fff;
+  margin-bottom: .8rem;
+}
+
+.price h1 sup {
+  font-size: 16px;
+  color: var(--Light---Gray);
+  font-weight: 400;
+}
+
+.price p {
+  margin-bottom: 35px;
+  color: #f7f7f7;
+}
+
+.price button {
+  height: 55px;
+  width: 100%;
+  background-color: var(--Bright-Yellow);
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--Light---Gray);
+  border-radius: 8px;
+}
+
+.why__us {
+  padding: 30px 75px 30px 40px;
+  background-color: hsl(179, 47%, 52%);
+}
+
+.why__us p {
+  line-height: 1.5;
+  color: var(--Light---Gray);
+}
+
+@media screen and (max-width: 700px) {
+
+  body {
+    padding: 30px 0;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    width: 500px;
+  }
+
+  .price {
+    grid-column: 1 / 3;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    width: 300px;
+  }
+
+  .offer {
+    padding: 50px 28px;
+  }
+
+  .offer__paragraph {
+    font-size: 16px;
+  }
+
+  .offer__title {
+    font-size: 22px;
+  }
+
+  .offer .info {
+    text-align: justify;
+  }
+}
